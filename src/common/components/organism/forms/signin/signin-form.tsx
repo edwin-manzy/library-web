@@ -2,7 +2,7 @@ import { Trans } from '@lingui/react';
 import { ReactElement, useState } from 'react';
 import { Button } from 'src/common/components/atoms/button';
 import { TextInput } from 'src/common/components/atoms/text-input';
-// import { apiSignin } from './signin.api';
+import { apiSignin } from './signin.api';
 
 export const SigninForm = (): ReactElement => {
 
@@ -10,7 +10,11 @@ export const SigninForm = (): ReactElement => {
   const [email, setEmail] = useState('');
 
   const signin = (): void => {
-    console.log(email, password);
+    apiSignin(email, password).then(() => {
+      console.log('signed in');
+    }).catch((err: unknown) => {
+      console.log(err);
+    });
   };
 
   return <div className='w-11/12 max-w-2xl' >
