@@ -1,0 +1,106 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2025-01-31 15:44+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:10
+msgid "features.account.signup.signup"
+msgstr "Sign up"
+
+#. js-lingui-explicit-id
+#: src/features/not-found/not-found.tsx:11
+msgid "features.not-found.title"
+msgstr "Page not found"
+
+#. js-lingui-explicit-id
+#: src/features/not-found/not-found.tsx:12
+msgid "features.not-found.par"
+msgstr "The page you are looking for has expired, is no longer available, or does not exist."
+
+#. js-lingui-explicit-id
+#: src/features/not-found/not-found.tsx:13
+msgid "features.not-found.back-to-home"
+msgstr "Back to home"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:11
+msgid "features.account.signup.paragraph.signup"
+msgstr "Signup"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:15
+msgid "features.account.signup.email"
+msgstr "Email"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:18
+msgid "features.account.signup.password"
+msgstr "Password"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:21
+msgid "features.account.signup.confirm-password"
+msgstr "Confirm password"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:25
+msgid "features.account.signup.create-account"
+msgstr "Create account"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:30
+#: src/common/components/organism/forms/signin/signin-form.tsx:9
+#: src/common/components/organism/forms/signin/signin-form.tsx:21
+msgid "common.components.organism.signin"
+msgstr "Sign in"
+
+#. js-lingui-explicit-id
+#: src/common/components/organism/forms/signin/signin-form.tsx:10
+msgid "common.components.organism.paragraph.signin"
+msgstr "Hey! You gotta sign in before moving forward"
+
+#. js-lingui-explicit-id
+#: src/common/components/organism/forms/signin/signin-form.tsx:14
+msgid "common.components.organism.email"
+msgstr "Email or phone"
+
+#. js-lingui-explicit-id
+#: src/common/components/organism/forms/signin/signin-form.tsx:17
+msgid "common.components.organism.password"
+msgstr "Password"
+
+#. js-lingui-explicit-id
+#: src/common/components/organism/forms/signin/signin-form.tsx:24
+msgid "common.components.organism.forgot-password"
+msgstr "Forgot password?"
+
+#. js-lingui-explicit-id
+#: src/common/components/organism/forms/signin/signin-form.tsx:28
+msgid "common.components.organism.create-account"
+msgstr "Create account"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:10
+#~ msgid "features.account.signup.signin"
+#~ msgstr "Signin"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:11
+#~ msgid "features.account.signup.paragraph.signin"
+#~ msgstr "features.account.signup.paragraph.signin"
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:28
+#~ msgid "features.account.signup.forgot-password"
+#~ msgstr "features.account.signup.forgot-password"
