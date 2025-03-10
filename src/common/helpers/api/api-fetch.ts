@@ -1,6 +1,7 @@
+import { produce } from 'immer';
 import { ApiResponse } from 'src/common/interfaces/api';
 
-export const apiFetch = async <T>(url: string, options: RequestInit): Promise<ApiResponse<T>> => {
+export const apiFetch = async <T>(url: string, options: RequestInit = {}): Promise<ApiResponse<T>> => {
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   let fetchURL = import.meta.env.VITE_APP_API_URL as string ?? '';
 
@@ -18,8 +19,19 @@ export const apiFetch = async <T>(url: string, options: RequestInit): Promise<Ap
     fetchURL += url;
   }
 
-  const result = await fetch(fetchURL, options)
+  const fetchOptions = produce(options, (draft) => {
+    if (!draft.credentials) {
+      draft.credentials = 'include';
+    }
+    return draft;
+  });
+
+  const result = await fetch(fetchURL, fetchOptions)
     .then((res) => res.json() as Promise<ApiResponse<T>>);
+
+  result.unwrap = (): T => {
+    return result.data;
+  };
 
   return result;
 };

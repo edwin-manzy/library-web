@@ -7,11 +7,15 @@ export const useRouteProps = (): LBSRouteHandle => {
   const location = useLocation();
   const matches = matchRoutes(routes, location);
 
-  const route = matches && matches[0].route.handle;
+  let handle: Partial<LBSRouteHandle> = {};
+  if (matches && matches.length > 0 ) {
+    handle = matches[matches.length - 1]?.route.handle ?? {};
+  }
 
   return {
-    fullscreen: route?.fullscreen || false,
-    colorMode: route?.colorMode || ThemeColorMode.auto,
-    authRequired: route?.authRequired || false,
+    fullscreen: handle.fullscreen ?? false,
+    colorMode: handle.colorMode ?? ThemeColorMode.auto,
+    authRequired: handle.authRequired ?? false,
+    skipUserAuth: handle.skipUserAuth ?? false,
   };
 };

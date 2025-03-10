@@ -5,6 +5,7 @@ export interface LBSRouteHandle {
   fullscreen: boolean,
   colorMode: ThemeColorMode,
   authRequired: boolean,
+  skipUserAuth: boolean,
 }
 
 

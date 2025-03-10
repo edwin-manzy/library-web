@@ -29,6 +29,7 @@
     "tests/**/*",
     "jest.config.ts",
     "jest.setup.ts",
+    "react-router-dom.d.ts"
   ],
   "ignorePatterns": ["!vitest.config.ts"]
 }
