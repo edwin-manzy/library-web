@@ -1,6 +1,7 @@
 import { ReactElement, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router';
 import { SimpleLoader } from 'src/common/components/molecules/loaders';
+import { API_STATUS } from 'src/common/constants/api';
 import { USER_ACTIONS } from 'src/common/constants/user';
 import { useRouteProps } from 'src/common/hooks/router/use-route-props';
 import { useUser } from 'src/store/user';
@@ -18,13 +19,15 @@ export const UserInitialize = (): ReactElement | null => {
     };
 
     getUser().then(data => {
-      const { user } = data.unwrap();
-      dispatch({
-        action: USER_ACTIONS.SIGN_IN,
-        payload: {
-          user
-        }
-      });
+      if (data.status === API_STATUS.SUCCESS) {
+        const { user } = data.unwrap();
+        dispatch({
+          action: USER_ACTIONS.SIGN_IN,
+          payload: {
+            user
+          }
+        });
+      }
     }).catch(() => {
       void navigate('/error/system');
     });

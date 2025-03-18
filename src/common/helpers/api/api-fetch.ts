@@ -1,5 +1,8 @@
 import { produce } from 'immer';
+import { API_STATUS } from 'src/common/constants/api';
 import { ApiResponse } from 'src/common/interfaces/api';
+
+import { SysError } from 'src/common/interfaces/errors';
 
 export const apiFetch = async <T>(url: string, options: RequestInit = {}):
 Promise<ApiResponse<T>> => {
@@ -30,9 +33,15 @@ Promise<ApiResponse<T>> => {
   const result = await fetch(fetchURL, fetchOptions)
     .then((res) => res.json() as Promise<ApiResponse<T>>);
 
-  result.unwrap = (): T => {
-    return result.data;
-  };
+  if (result.status ===  API_STATUS.SUCCESS) {
+    result.unwrap = (): T => {
+      return result.data;
+    };
+  } else {
+    result.getError = (): SysError => {
+      return result.data;
+    };
+  }
 
   return result;
 };

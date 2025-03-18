@@ -1,15 +1,16 @@
 import { apiFetch } from 'src/common/helpers/api/api-fetch';
 
 import { isBlank, isEmail } from 'src/common/helpers/validators';
+import { ApiResponse } from 'src/common/interfaces/api';
 
-import { SigninResponse } from './signin.types';
+import { User } from 'src/common/interfaces/user';
 
-export const apiSignin = async (email: string, password: string): Promise<void> => {
+export const apiSignin = async (email: string, password: string): Promise<ApiResponse<User>> => {
   isBlank(email);
   isEmail(email);
   isBlank(password);
 
-  const result = await apiFetch<SigninResponse>('/user/signin', {
+  return await apiFetch<User>('/user/signin', {
     credentials: 'include',
     body: JSON.stringify({ email, password }),
     method: 'POST',
@@ -17,7 +18,4 @@ export const apiSignin = async (email: string, password: string): Promise<void> 
       'Content-Type': 'application/json',
     },
   });
-
-  // eslint-disable-next-line no-console
-  console.log(result);
 };

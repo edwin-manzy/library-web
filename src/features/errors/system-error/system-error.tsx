@@ -4,7 +4,6 @@ import { ReactNode } from 'react';
 import { Button } from 'src/common/components/atoms/button/button';
 
 export const SystemErrorPage = (): ReactNode => {
-
   return <div className='w-full h-full flex items-center justify-center'>
     <div className='flex flex-col gap-4 items-center' >
       <p className='text-9xl font-bold' >500</p>
