@@ -3,7 +3,8 @@ import { ChangeEvent, ReactElement, useState } from 'react';
 import { inputStyle, labelStyle, wrapperStyle } from './text-input.style';
 import { TextInputProps } from './text-input.types';
 
-export const TextInput = ({ label, children, onChange, type = 'text' }: TextInputProps): ReactElement => {
+export const TextInput = ({ label, children, onChange, type = 'text' }: TextInputProps):
+ReactElement => {
   const [value, setValue] = useState<string>('');
   const active = !!value;
   const wrapperClass = wrapperStyle({ active });

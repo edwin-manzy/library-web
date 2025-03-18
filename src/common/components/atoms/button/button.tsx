@@ -28,6 +28,7 @@ export const Button = ({
   </Component>;
 };
 
-const ButtonComponent = (props: React.HTMLAttributes<HTMLButtonElement>): ReactElement<HTMLButtonElement> => {
+const ButtonComponent = (props: React.HTMLAttributes<HTMLButtonElement>):
+  ReactElement<HTMLButtonElement> => {
   return <button type='button' {...props} />;
 };

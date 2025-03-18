@@ -18,5 +18,6 @@ export const apiSignin = async (email: string, password: string): Promise<void> 
     },
   });
 
+  // eslint-disable-next-line no-console
   console.log(result);
 };

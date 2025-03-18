@@ -4,8 +4,6 @@ import { useUser } from 'src/store/user';
 export const HeaderAccount = (): ReactElement | null => {
   const { user } = useUser();
 
-  console.log(user);
-
   if (!user) {
     return null;
   }
