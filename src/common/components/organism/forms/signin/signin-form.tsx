@@ -33,7 +33,7 @@ export const SigninForm = (): ReactElement => {
         </Trans>
       </p>
       <p>
-        { error != '' ? <p>{error}</p> : null}
+        { error != '' ? error : null}
       </p>
       <div className='flex gap-4 flex-col' >
         <div className='flex flex-col  gap-4'>
