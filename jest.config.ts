@@ -1,6 +1,7 @@
+import { pathsToModuleNameMapper } from 'ts-jest';
+
 import type { Config } from 'jest';
 // import { compilerOptions } from './tsconfig.app';
-import { pathsToModuleNameMapper } from 'ts-jest';
 
 const config: Config = {
   verbose: true,
@@ -25,7 +26,8 @@ const config: Config = {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   moduleNameMapper: pathsToModuleNameMapper({}),
   transform: {
-    '^.+\\.(ts|tsx)?$': ['ts-jest', { diagnostics: { ignoreCodes: ['TS151001'], }, tsconfig: './tsconfig.app.json' }],
+    '^.+\\.(ts|tsx)?$': ['ts-jest',
+      { diagnostics: { ignoreCodes: ['TS151001'], }, tsconfig: './tsconfig.app.json' }],
   },
   coveragePathIgnorePatterns: [
     '/node_modules/',
