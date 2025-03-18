@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
-import { useRouteProps } from 'src/common/hooks/router/use-route-props';
-import { Header } from './header';
 import { Outlet } from 'react-router';
+import { useRouteProps } from 'src/common/hooks/router/use-route-props';
+
+import { Header } from './header';
 
 export const Shell = (): ReactNode | undefined => {
   const { fullscreen } = useRouteProps();

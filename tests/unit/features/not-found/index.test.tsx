@@ -1,7 +1,7 @@
-import { render } from 'tests/tools';
-import { NotFoundPage } from 'src/features/errors/system-error';
 import { RenderResult } from '@testing-library/react';
 import { axe } from 'jest-axe';
+import { NotFoundPage } from 'src/features/errors/system-error';
+import { render } from 'tests/tools';
 
 
 const setup = (): RenderResult => {

@@ -1,6 +1,7 @@
 import { ChangeEvent, ReactElement, useState } from 'react';
-import { TextInputProps } from './text-input.types';
+
 import { inputStyle, labelStyle, wrapperStyle } from './text-input.style';
+import { TextInputProps } from './text-input.types';
 
 export const TextInput = ({ label, children, onChange, type = 'text' }: TextInputProps): ReactElement => {
   const [value, setValue] = useState<string>('');

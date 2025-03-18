@@ -1,6 +1,7 @@
 export interface SysError extends Error {
   message: string,
   userMessage: string,
-  status: number,
+  title: string,
+  status: 'error' | 'success',
   inputName?: string,
 }

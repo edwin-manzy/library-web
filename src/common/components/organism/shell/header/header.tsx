@@ -1,8 +1,12 @@
 import { ReactElement } from 'react';
-import { Button } from 'src/common/components/atoms/button/button';
+
+import { HeaderAccount } from './components/account-details';
 import { headerWrapperStyle } from './header.style';
+// import { useUser } from 'src/store/user';
 
 export const Header = (): ReactElement=> {
+
+  // const { user } = useUser();
 
   return <div className={headerWrapperStyle()}>
     <div className='max-w-11/12 w-full flex justify-between mx-auto' >
@@ -10,10 +14,7 @@ export const Header = (): ReactElement=> {
         <div>Library System</div>
         <div>Search Bar</div>
       </div>
-      <div className='flex gap-2'>
-        <Button intent='link' to='/account/signup' >Sign up</Button>
-        <Button className='rounded-full' to='/account/signin'  >Sign in</Button>
-      </div>
+      <HeaderAccount />
     </div>
   </div>;
 };

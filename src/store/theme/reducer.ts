@@ -1,6 +1,7 @@
-import { ThemeActions, ThemeContext } from './theme.types';
-import { ThemeActionName } from 'src/common/constants/enum/theme';
 import { produce } from 'immer';
+import { ThemeActionName } from 'src/common/constants/enum/theme';
+
+import { ThemeActions, ThemeContext } from './theme.types';
 
 export const themeReducer = (theme: ThemeContext, action: ThemeActions): ThemeContext => {
 

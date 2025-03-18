@@ -10,7 +10,10 @@ export const accountSettingsRouter: LBSRouteObj[] = [
         Component: lazy(async () => {
           const { SignInPage } = await import('src/features/account/signin');
           return { default: SignInPage };
-        })
+        }),
+        handle: {
+          fullscreen: true,
+        }
       },
       {
         path: 'signup',

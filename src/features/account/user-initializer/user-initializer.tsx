@@ -1,15 +1,16 @@
 import { ReactElement, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router';
 import { SimpleLoader } from 'src/common/components/molecules/loaders';
-import { useUser } from 'src/store/user';
-import { getUser } from './user-initializer.api';
 import { USER_ACTIONS } from 'src/common/constants/user';
 import { useRouteProps } from 'src/common/hooks/router/use-route-props';
+import { useUser } from 'src/store/user';
+
+import { getUser } from './user-initializer.api';
 
 export const UserInitialize = (): ReactElement | null => {
-  const { skipUserAuth } = useRouteProps();
+  const { skipUserAuth, authRequired } = useRouteProps();
   const navigate = useNavigate();
-  const { loaded, dispatch } = useUser();
+  const { loaded, dispatch, user } = useUser();
 
   useEffect(() => {
     if (skipUserAuth || loaded) {
@@ -29,7 +30,16 @@ export const UserInitialize = (): ReactElement | null => {
     });
   }, [dispatch, navigate, skipUserAuth, loaded]);
 
-  if (loaded || skipUserAuth) {
+  if (skipUserAuth) {
+    return <Outlet />;
+  }
+
+  if (authRequired && loaded && !user) {
+    void navigate('/account/signin');
+    return <SimpleLoader />;
+  }
+
+  if (loaded) {
     return <Outlet />;
   }
 

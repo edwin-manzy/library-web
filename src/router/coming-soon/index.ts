@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+
 import type { LBSRouteObj } from 'src/common/interfaces/router';
 
 const ComingSoonPage = lazy(async () => {

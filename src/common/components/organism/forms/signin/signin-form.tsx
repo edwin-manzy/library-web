@@ -2,12 +2,17 @@ import { Trans } from '@lingui/react';
 import { ReactElement, useState } from 'react';
 import { Button } from 'src/common/components/atoms/button';
 import { TextInput } from 'src/common/components/atoms/text-input';
+
+import { USER_ERRORS } from 'src/common/constants/user';
+
 import { apiSignin } from './signin.api';
 
 export const SigninForm = (): ReactElement => {
 
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const [err, setError] = useState<undefined | string>();
+
 
   const signin = (): void => {
     apiSignin(email, password).then(() => {
@@ -21,6 +26,9 @@ export const SigninForm = (): ReactElement => {
     <div className='max-w mx-auto flex gap-6 flex-col border border-gray-300 p-12 rounded-sm'>
       <h1 className='text-8xl font-bold'><Trans id='common.components.organism.signin' >Sign in</Trans></h1>
       <p><Trans id='common.components.organism.paragraph.signin' >Hey! You gotta sign in before moving forward</Trans></p>
+      <p>
+        { err && err.title === USER_ERRORS.EMAIL_PASSWORD_INCORRECT ? <p>{err}</p> : null}
+      </p>
       <div className='flex gap-4 flex-col' >
         <div className='flex flex-col  gap-4'>
           <TextInput onChange={setEmail} >

@@ -1,10 +1,11 @@
-import { defineConfig } from 'vite';
+import { lingui } from '@lingui/vite-plugin';
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
+import { defineConfig } from 'vite';
 // eslint-disable-next-line
 import eslint from 'vite-plugin-eslint2';
 import path from 'path';
-import { lingui } from '@lingui/vite-plugin';
-import tailwindcss from '@tailwindcss/vite';
+
 
 // https://vite.dev/config/
 export default defineConfig({  // eslint-disable-line 

@@ -48,6 +48,37 @@ export default tseslint.config(
       "import/first": "error",
       "import/no-duplicates": "error",
       "import/newline-after-import": "error",
+      "no-console": "error",
+      "import/no-commonjs": "error",
+      "import/no-relative-packages": "error",
+      "import/no-useless-path-segments": "error",
+      "import/order": ["error", {
+      "alphabetize": { "order": "asc" },
+      "groups": ["external", "internal", "index", "type"],
+      "pathGroups": [
+        {
+          "pattern": "dirA/**",
+          "group": "internal",
+          "position": "after"
+        },
+        {
+          "pattern": "dirB/**",
+          "group": "internal",
+          "position": "before"
+        },
+        {
+          "pattern": "dirC/**",
+          "group": "internal"
+        }
+        ],
+        "newlines-between": "always-and-inside-groups",
+        "pathGroupsExcludedImportTypes": [],
+      }],
+      "max-len": ["error", {
+        "ignoreComments": true,
+        "code": 100,
+        "tabWidth": 2,
+      }],
       "@typescript-eslint/explicit-function-return-type": "error",
       "no-trailing-spaces": ["error", { "ignoreComments": true }],
       "no-multiple-empty-lines": ["error", { "max": 2, "maxBOF": 0, "maxEOF": 0 }],

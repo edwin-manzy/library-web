@@ -2,8 +2,9 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import 'src/style/tailwind-import.css';
 import { RouterProvider } from 'react-router';
-import { router } from './router';
+
 import { LocaleProvider } from './locale';
+import { router } from './router';
 import { ThemeProvider } from './store/theme/provider';
 import { UserProvider } from './store/user';
 

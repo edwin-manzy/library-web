@@ -1,7 +1,9 @@
 import { ReactElement } from 'react';
-import { ButtonProps } from './button.types';
-import { buttonStyle } from './button.style';
+
 import { Link, NavLink } from 'react-router';
+
+import { buttonStyle } from './button.style';
+import { ButtonProps } from './button.types';
 
 export const Button = ({
   children,

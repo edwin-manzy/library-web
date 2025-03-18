@@ -1,5 +1,5 @@
-import { I18nProvider } from '@lingui/react';
 import { i18n } from '@lingui/core';
+import { I18nProvider } from '@lingui/react';
 import { PropsWithChildren, ReactElement } from 'react';
 
 import { messages as enMessages } from 'src/locale/messages/en/messages';
