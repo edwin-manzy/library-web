@@ -7,7 +7,7 @@ export const HeaderAccount = (): ReactElement | null => {
   if (!user) {
     return null;
   }
-  return <div className='flex gap-5 items-center' >
+  return <div className='w-120 flex gap-5 items-center' >
     <div className='w-20 h-20 rounded-full bg-gray-100 font-black ' />
     <div>
       <p className='font-bold' >{ user.name }</p>

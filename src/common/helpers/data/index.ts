@@ -14,3 +14,10 @@ export const createMirrorLower = <T extends readonly string[]>(arr: T): MirrorLo
   return Object.fromEntries(arr.map(key =>
     [key, key.toLocaleLowerCase()])) as MirrorLowerCaseArray<T>;
 };
+
+export const defaultValue = <T> (value: T | undefined, defaultValue: T): T => {
+  if (value === undefined) {
+    return defaultValue;
+  }
+  return value as T;
+};

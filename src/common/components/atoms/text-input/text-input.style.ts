@@ -11,7 +11,7 @@ export const labelStyle = cva(`flex items-center
     },
     active: {
       true: 'text-lg h-10 font-bold',
-      false: 'text-3xl h-22',
+      false: 'text-2xl h-20',
     }
   },
   defaultVariants: {
@@ -19,7 +19,7 @@ export const labelStyle = cva(`flex items-center
   }
 });
 
-export const wrapperStyle = cva('uc-first relative rounded-lg',
+export const wrapperStyle = cva('uc-first relative flex',
   {
     variants: {
       intent: {
@@ -54,7 +54,7 @@ export const wrapperStyle = cva('uc-first relative rounded-lg',
   }
 );
 
-export const inputStyle = cva('w-full h-22 pt-2 relative outline-none px-5', {
+export const inputStyle = cva('w-full h-20 pt-2 relative outline-none px-5', {
   variants: {
     active: {
       true: '',

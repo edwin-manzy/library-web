@@ -2,10 +2,11 @@ import { NonIndexRouteObject } from 'react-router';
 import { ThemeColorMode } from 'src/common/constants/enum/theme';
 
 export interface LBSRouteHandle {
-  fullscreen: boolean,
-  colorMode: ThemeColorMode,
-  authRequired: boolean,
-  skipUserAuth: boolean,
+  fullscreen: boolean;
+  mainMenu: boolean;
+  colorMode: ThemeColorMode;
+  authRequired: boolean;
+  skipUserAuth: boolean;
 }
 
 

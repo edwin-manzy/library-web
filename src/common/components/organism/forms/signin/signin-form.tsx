@@ -65,7 +65,7 @@ export const SigninForm = (): ReactElement => {
         { error != '' ? error : null}
       </p>
       <div className='flex gap-4 flex-col' >
-        <div className='flex flex-col  gap-4'>
+        <div className='flex flex-col gap-4'>
           <TextInput onChange={setEmail} >
             <Trans id='common.components.organism.email' >Email</Trans>
           </TextInput>

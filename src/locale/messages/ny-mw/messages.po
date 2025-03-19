@@ -14,79 +14,87 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. js-lingui-explicit-id
-#: src/features/account/signup/signup.tsx:10
-msgid "features.account.signup.signup"
+#: src/common/components/organism/shell/header/header.tsx:20
+msgid "components.shell.main-menu.search"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: src/features/not-found/not-found.tsx:11
+#: src/features/errors/system-error/system-error.tsx:11
+#: src/features/errors/not-found/not-found.tsx:12
 msgid "features.not-found.title"
 msgstr "Tsamba Silikupezeka"
 
 #. js-lingui-explicit-id
-#: src/features/not-found/not-found.tsx:12
+#: src/features/errors/system-error/system-error.tsx:14
+#: src/features/errors/not-found/not-found.tsx:15
 msgid "features.not-found.par"
 msgstr "Tsamba lomwe mukufuna latha, silikugwiranso ntchito, kapena sililipo."
 
 #. js-lingui-explicit-id
-#: src/features/not-found/not-found.tsx:13
+#: src/features/errors/system-error/system-error.tsx:20
+#: src/features/errors/not-found/not-found.tsx:20
 msgid "features.not-found.back-to-home"
 msgstr "Bwererani poyambira"
 
 #. js-lingui-explicit-id
-#: src/features/account/signup/signup.tsx:11
+#: src/features/account/signup/signup.tsx:28
+msgid "features.account.signup.signup"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/features/account/signup/signup.tsx:31
 msgid "features.account.signup.paragraph.signup"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: src/features/account/signup/signup.tsx:15
+#: src/features/account/signup/signup.tsx:38
 msgid "features.account.signup.email"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: src/features/account/signup/signup.tsx:18
+#: src/features/account/signup/signup.tsx:41
 msgid "features.account.signup.password"
 msgstr "Password"
 
 #. js-lingui-explicit-id
-#: src/features/account/signup/signup.tsx:21
+#: src/features/account/signup/signup.tsx:44
 msgid "features.account.signup.confirm-password"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: src/features/account/signup/signup.tsx:25
+#: src/features/account/signup/signup.tsx:49
 msgid "features.account.signup.create-account"
 msgstr "Create account"
 
 #. js-lingui-explicit-id
-#: src/features/account/signup/signup.tsx:30
-#: src/common/components/organism/forms/signin/signin-form.tsx:9
-#: src/common/components/organism/forms/signin/signin-form.tsx:21
+#: src/features/account/signup/signup.tsx:55
+#: src/common/components/organism/forms/signin/signin-form.tsx:57
+#: src/common/components/organism/forms/signin/signin-form.tsx:78
 msgid "common.components.organism.signin"
 msgstr "Lowani"
 
 #. js-lingui-explicit-id
-#: src/common/components/organism/forms/signin/signin-form.tsx:10
+#: src/common/components/organism/forms/signin/signin-form.tsx:60
 msgid "common.components.organism.paragraph.signin"
 msgstr "Bho! Mukuyenera kulowa kaye musanapite patsogolo."
 
 #. js-lingui-explicit-id
-#: src/common/components/organism/forms/signin/signin-form.tsx:14
+#: src/common/components/organism/forms/signin/signin-form.tsx:70
 msgid "common.components.organism.email"
 msgstr "Imelo kapena foni namba"
 
 #. js-lingui-explicit-id
-#: src/common/components/organism/forms/signin/signin-form.tsx:17
+#: src/common/components/organism/forms/signin/signin-form.tsx:73
 msgid "common.components.organism.password"
 msgstr "Mawu achinsinsi"
 
 #. js-lingui-explicit-id
-#: src/common/components/organism/forms/signin/signin-form.tsx:24
+#: src/common/components/organism/forms/signin/signin-form.tsx:83
 msgid "common.components.organism.forgot-password"
 msgstr "Mwayiwala mawu achinsinsi?"
 
 #. js-lingui-explicit-id
-#: src/common/components/organism/forms/signin/signin-form.tsx:28
+#: src/common/components/organism/forms/signin/signin-form.tsx:89
 msgid "common.components.organism.create-account"
 msgstr "Tsegurani akaunti"
 
