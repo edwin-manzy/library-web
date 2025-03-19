@@ -1,7 +1,9 @@
 import { Dispatch } from 'react';
 import { USER_ACTIONS, USER_TYPES } from 'src/common/constants/user';
 
-export type UserType = typeof USER_TYPES[keyof (typeof USER_TYPES)]
+export type UserTypes = typeof USER_TYPES
+
+export type UserType = typeof USER_TYPES[keyof UserTypes]
 
 export interface User {
   name: string;

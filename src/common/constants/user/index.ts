@@ -1,12 +1,12 @@
-import { createMirror } from 'src/common/helpers/data';
+import { createMirror, createMirrorLower } from 'src/common/helpers/data';
 
 export const USER_ACTIONS = createMirror([
   'SIGN_IN',
   'SIGN_OUT'
 ] as const);
 
-export const USER_TYPES = createMirror([
-  'student', 'librarian',
+export const USER_TYPES = createMirrorLower([
+  'STUDENT', 'LIBRARIAN', 'ADMINISTRATOR'
 ] as const);
 
 export const USER_ERRORS = createMirror([
